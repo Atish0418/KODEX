@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.page{
+    min-width: 100vh;
+        /* background: #fff;
+        display: flex;
+        justify-content: center;
+        padding: 40px 20px; */
+}
+
+.header{
+    background: #e1f1ff;
+    text-align: center;
+    padding: 30px;
+}
+
+.header img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.header h1{
+    font-size: 22px;
+}
+
+.header p{
+    font-size: 14px;
+    color: #666;
+}
+
+.section{
+    padding: 24px 30px;
+    border-bottom: 1px solid #eee;
+}
+
+.section h2{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.section p{
+    font-size: 16px;
+    color: #555;
+}
+
+.section h3{
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.section small{
+    color: #777;
+}
+
+.section ul{
+    margin-left: 30px;
+    margin-top: 8px;
+    color: #555;
+    font-size: 15px;
+}
+
+.skills{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.skills span{
+    background: #eaf6ff;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.footer{
+    background-color: #e1f1ff;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer p{
+    font-size: 14px;
+    color: #444;
+}
+
+.footer a{
+    text-decoration: none;
+    color: rgb(1, 127, 195);
+}
