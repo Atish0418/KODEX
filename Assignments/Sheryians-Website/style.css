@@ -15,7 +15,7 @@ body {
 main{
     min-height: 100%;
     width: 100%;
-    background-color: black;
+    background: radial-gradient(#220E08, black);
 }
 
 nav{
@@ -30,6 +30,13 @@ nav .part2{
     align-items: center;
     justify-content: center;
     gap: 30px;
+    background: linear-gradient(#171212, #100B0B);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.part2 h4{
+    font-size: 14px;
 }
 
 nav .logo{
