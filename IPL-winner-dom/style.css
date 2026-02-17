@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial Black", Arial, sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+}
+
+.card{
+    min-height: 550px;
+    width: 90%;
+    max-width: 420px;
+    background: #ffff;
+    border: 4px solid #000;
+    padding: 50px 40px;
+    box-shadow: 8px 8px 0px #000;
+    text-align: center;
+    
+}
+
+h1{
+    font-size: clamp(20px, 5vw, 28px);
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.result{
+    border: 4px solid #000;
+    margin-bottom: 40px;
+    background-color: #ffdd00;
+    box-shadow: 6px 6px 0px #000;
+}
+
+p{
+    font-size: clamp(50px, 10vw, 80px);
+    font-weight: 900;
+    letter-spacing: 10px;
+}
+
+button{
+    padding: 15px 30px;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    background: #ff004c;
+    font-weight: 600;
+    color: #fff;
+    border: 4px solid #000;
+    box-shadow: 6px 6px 0px #000;
+    cursor: pointer;
+    transition: 0.1s ease;
+}
+
+button:active{
+    box-shadow: 2px 2px 0px #000;
+    transform: translate(4px, 4px);
+}
+
+
+@media (max-width: 480px) {
+
+    .card {
+        padding: 30px 20px;
+        min-height: auto;
+        margin-left: 10px;
+    }
+
+    button {
+        width: 100%;
+        padding: 14px;
+        font-size: 14px;
+    }
+
+    .result {
+        margin-bottom: 30px;
+    }
+
+    p {
+        letter-spacing: 6px;
+    }
+}
