@@ -43,6 +43,6 @@ updateTime();
 
 setInterval(()=>{    
     updateTime();
-    // tickSound.currentTime = 5;
-    // tickSound.play();
+    // tickSound.currentTime = 0;
+    tickSound.play();
 }, 1000)
