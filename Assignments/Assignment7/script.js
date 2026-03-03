@@ -3,9 +3,9 @@ var cars = [
         "carName": "Mahindra XUV700",
         "carType": "SUV",
         "carColor": [
-            { "name": "Everest White", "hex": "#F2F3F4" },
-            { "name": "Midnight Black", "hex": "#080808" },
-            { "name": "Electric Blue", "hex": "#003399" },
+            { "name": "Everest White", "hex": "#F2F3F4", "png": "/images/mahindra1.png" },
+            { "name": "Midnight Black", "hex": "#080808", "png": "/images/mahindra2.png" },
+            { "name": "Electric Blue", "hex": "#003399", "png": "/images/mahindra3.png" },
             { "name": "Red Rage", "hex": "#8B0000" }
         ],
         "parentCompany": "Mahindra & Mahindra",
@@ -33,9 +33,9 @@ var cars = [
         "carName": "Hyundai Creta",
         "carType": "Mid-size SUV",
         "carColor": [
-            { "name": "Abyss Black", "hex": "#121212" },
-            { "name": "Robust Emerald", "hex": "#004225" },
-            { "name": "Atlas White", "hex": "#FFFFFF" },
+            { "name": "Abyss Black", "hex": "#121212", "png": "/images/creta1.png" },
+            { "name": "Robust Emerald", "hex": "#004225", "png": "/images/creta2.png" },
+            { "name": "Atlas White", "hex": "#FFFFFF", "png": "/images/creta3.png" },
             { "name": "Fiery Red", "hex": "#B22222" }
         ],
         "parentCompany": "Hyundai India",
@@ -63,10 +63,10 @@ var cars = [
         "carName": "Toyota Innova Hycross",
         "carType": "MPV",
         "carColor": [
-            { "name": "Blackish Ageha", "hex": "#1C2841" },
-            { "name": "Platinum White", "hex": "#E5E4E2" },
-            { "name": "Attitude Black", "hex": "#000000" },
-            { "name": "Silver Metallic", "hex": "#C0C0C0" }
+            { "name": "Blackish Ageha", "hex": "#1C2841", "png": "/images/innova1.png" },
+            { "name": "Platinum White", "hex": "#E5E4E2", "png": "/images/innova2.png" },
+            { "name": "Attitude Black", "hex": "#000000", "png": "/images/innova3.png" },
+            { "name": "Silver Metallic", "hex": "#0c0909" }
         ],
         "parentCompany": "Toyota India",
         "Engine": "2.0L VVTi Hybrid",
@@ -93,9 +93,9 @@ var cars = [
         "carName": "MG Hector",
         "carType": "SUV",
         "carColor": [
-            { "name": "Dune Brown", "hex": "#5D4037" },
-            { "name": "Havana Grey", "hex": "#4F4F4F" },
-            { "name": "Candy White", "hex": "#FFFFFF" },
+            { "name": "Dune Brown", "hex": "#5D4037", "png": "/images/mg1.png" },
+            { "name": "Havana Grey", "hex": "#4F4F4F", "png": "/images/mg2.png" },
+            { "name": "Candy White", "hex": "#FFFFFF", "png": "/images/mg3.png" },
             { "name": "Glaze Red", "hex": "#D32F2F" }
         ],
         "parentCompany": "MG Motor India",
@@ -124,10 +124,10 @@ var cars = [
 
 var sum = '';
 
-cars.forEach(function(elem){
+cars.forEach(function (elem, i) {
     sum += `<div class="car-card">
             <div class="div1">
-                <img src="${elem.image}"
+                <img class="car-image" src="${elem.carColor[0].png}" 
                     alt="">
                 ${elem.available ? `<h5>available</h5>` : ''}
             </div>
@@ -139,11 +139,14 @@ cars.forEach(function(elem){
                     <h4>Engine: ${elem.Engine}</h4>
                     <h4>Mileage: ${elem.mileage}</h4>
                     <div class="colors">
-                        <h4>colors: </h4>
-                        <div style="background-color : ${elem.carColor[0].hex}"></div>
-                        <div style="background-color : ${elem.carColor[1].hex}"></div>
-                        <div style="background-color : ${elem.carColor[2].hex}"></div>
-                        <p>+4</p>
+                         ${elem.carColor.map((color, index) => `
+                            <div 
+                                class="color-circle"
+                                data-car="${i}"
+                                data-color="${index}"
+                                style="background-color:${color.hex}">
+                            </div>
+                        `).join('')}
                     </div>
                     <h6>Price: ${elem.price}</h6>
                 </div>
@@ -163,6 +166,22 @@ cars.forEach(function(elem){
                 </div>
             </div>
         </div>`
+})
+
+document.addEventListener("click", function(e){
+
+    if(e.target.classList.contains("color-circle")){
+
+        let carIndex = e.target.dataset.car
+        let colorIndex = e.target.dataset.color
+
+        let newImage = cars[carIndex].carColor[colorIndex].png
+
+        let card = e.target.closest(".car-card")
+        let img = card.querySelector(".car-image")
+
+        img.src = newImage
+    }
 })
 
 var main = document.querySelector('main');

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=IBM+Plex+Mono:wght@300;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <h1>STOCKROOM_01</h1>
+        <div class="stats">
+            <span id="totalItems">ITEMS: 0</span>
+            <span id="lowStock">LOW: 0</span>
+            <span id="totalValue">VALUE: ₹0</span>
+        </div>
+    </header>
+
+    <section class="panel">
+        <form id="itemForm">
+            <input type="text" id="name" placeholder="Item Name" required>
+            <input type="number" id="quantity" placeholder="Quantity" required>
+            <input type="number" id="price" placeholder="Price" required>
+            <input type="text" id="category" placeholder="Category" required>
+            <button>ADD ITEM</button>
+        </form>
+    </section>
+    
+    <section class="panel">
+        <input type="text" id="search" placeholder="Search inventory">
+    </section>
+
+    <section class="panel inventory" id="inventoryList"></section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

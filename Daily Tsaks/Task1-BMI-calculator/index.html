@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- screen 1 -->
+    <div class="container home">
+
+        <div class="header">
+            <h3><span>BMI</span> Calculator</h3>
+            <i class="ri-menu-line"></i>
+        </div>
+
+        <div class="image">
+            <img src="./assetes/hero.png" alt="">
+        </div>
+
+        <div class="bottom">
+            <h1>
+                Unveiling the <br> Secrets of
+                <span>Your <br> Body's Balance!</span>
+            </h1>
+
+            <p>Easily calculate your Body Mass Index (BMI) by entering your height and weight.</p>
+
+            <div class="line"></div>
+
+            <button class="btn" id="startBtn">Get Started</button>
+        </div>
+    </div>
+
+    <!-- screen 2 -->
+    <div class="container  from-page">
+
+        <div class="header">
+            <i class="ri-arrow-left-line" id="backBtn"></i>
+            <h3><span>BMI</span> Calculator</h3>
+            <i class="ri-menu-line"></i>
+        </div>
+
+        <div class="form">
+
+            <label>Your Name</label>
+            <input type="text">
+
+            <label>Address</label>
+            <input type="text">
+
+            <label>Date of Birth</label>
+            <input type="date">
+
+            <label>Select Gender</label>
+
+            <div class="gender">
+                <div class="gender-item">
+                    <div class="gender-box">
+                        <img src="./assetes/male.png" alt="">
+                    </div>
+                    <p>Male</p>
+                </div>
+
+                <div class="gender-item">
+                    <div class="gender-box">
+                        <img src="./assetes/female.png" alt="">
+                    </div>
+                    <p>Female</p>
+                </div>
+            </div>
+
+            <label>Your Height (Cm)</label>
+                <input type="number">
+
+                <label>Your Weight (Cm)</label>
+                <input type="number">
+
+                <button class="btn calculate">Calculate BMI</button>
+
+        </div>
+
+    </div>
+
+    <!-- Screen 3 -->
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -6,7 +6,7 @@
 
 ## 🌟 Demo
 
-🔗 **Live Demo:** [https://extraordinary-melomakarona-5bee36.netlify.app/](https://extraordinary-melomakarona-5bee36.netlify.app/) ([Random Color Card Generator][2])
+🔗 **Live Demo:** https://extraordinary-melomakarona-5bee36.netlify.app/
 
 ---
 

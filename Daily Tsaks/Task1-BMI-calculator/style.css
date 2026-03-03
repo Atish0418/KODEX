@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background: #f3f4f6;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.header h3{
+    font-size: 16px;
+    font-weight: 600;
+    font-weight: 500;
+}
+
+.header i{
+    font-size: 18px;
+}
+
+.header span{
+    font-weight: 800;
+}
+
+.image{
+    margin-top: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image img{
+    width: 100%;
+    max-width: 800px;
+}
+
+.bottom{
+    background: #4B49DE;
+    color: #ffff;   
+    padding: 30px 20px;
+    flex: 1;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.bottom h1{
+    font-size: 38px;
+    line-height: 1.1;
+    margin-bottom: 23%;
+}
+
+.bottom span{
+    font-weight: 400;
+}
+
+.bottom p{
+    font-size: 18px;
+    margin-bottom: 25px;    
+    line-height: 1.2;
+    opacity: 0.8;
+}
+
+.line{
+    height: 0.6px;
+    background-color: #fff;
+    margin-bottom: 40px;
+}
+
+.btn{
+    font-size: 16px;
+    width: 100%;
+    padding: 18px;
+    border:none;
+    border-radius: 12px;
+    background: #0f172a;
+    color: #ffff;
+    font-weight: 600;
+}
+
+
+/* screen 2 */
+.from-page{
+    display: none;
+}
+
+.form{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form label{
+    font-size: 14px;
+    font-weight: 600;
+    margin: 15px 8px;
+}
+
+
+.form input{
+    padding: 15px;
+    border-radius: 12px;
+    border: none;
+    background: #eef1f6;
+    font-size: 14px;
+}
+
+.gender{
+    display: flex;
+    gap: 15px;
+}
+
+.gender-item{
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.gender-item.active .gender-box {
+    border: 3px solid #4B49DE;
+}
+
+.gender-item p{
+    margin-top: 8px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.gender-box{
+    background: #eef1f6;
+    height: 130px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+}
+
+.gender-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.form .btn{
+    margin-top: 40px;
+    font-size: 16px;
+    width: 100%;
+    padding: 18px;
+    border:none;
+    border-radius: 12px;
+    background: #4B49DE;
+    color: #ffff;
+    font-weight: 600;
+}
+
+/* Screen 3 */
+.result-page {
+    display: none;
+}
+/* Result Page Container */
+.container {
+    /* padding: 20px; */
+}
+
+/* Purple Card */
+.result-card {
+    background: linear-gradient(135deg, #5B5AE6, #4B49DE);
+    color: white;
+    border-radius: 25px;
+    padding: 25px;
+    box-shadow: 0 15px 35px rgba(75, 73, 222, 0.3);
+    margin-bottom: 25px;
+}
+
+/* Top section */
+.result-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.result-top h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.result-top p {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.result-top img {
+    width: 70px;
+}
+
+/* BMI Score */
+.bmi-score {
+    margin-top: 20px;
+}
+
+.bmi-score h1 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.bmi-score span {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* Stats row */
+.stats {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.stats h3 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.stats p {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+/* Vertical divider */
+.divider-vertical {
+    width: 1px;
+    height: 35px;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Dark Info Card */
+.info-card {
+    background: #0F172A;
+    color: white;
+    padding: 25px;
+    border-radius: 25px;
+}
+
+.info-card h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.info-card strong {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.info-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-top: 10px;
+    opacity: 0.85;
+}
+
