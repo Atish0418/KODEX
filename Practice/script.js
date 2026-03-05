@@ -1,12 +1,18 @@
-var nav = document.querySelector('nav');
 
-var body = document.body;
 
-body.addEventListener('wheel', function(dets){
-    if(dets.deltaY > 0){
-        nav.style.transform = 'translateY(-100%)';
+// destructring on objects
+
+let obj = {
+    name: "Rahul",
+    address: "Saket nagar",
+    empId : "SPL34",
+    designation: "developer",
+    project:{
+        name: "e-commerce"
     }
-    else{
-        nav.style.transform = 'translateY(0%)';
-    }
-})
+}
+
+
+let {designation, empId, project:{name},} = obj;
+
+console.log(designation, empId, name)
