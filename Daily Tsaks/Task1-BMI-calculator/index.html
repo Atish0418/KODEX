@@ -45,31 +45,31 @@
         <div class="header">
             <i class="ri-arrow-left-line" id="backBtn"></i>
             <h3><span>BMI</span> Calculator</h3>
-            <i class="ri-menu-line"></i>
+            <!-- <i class="ri-menu-line"></i> -->
         </div>
 
         <div class="form">
 
             <label>Your Name</label>
-            <input type="text">
+            <input type="text" id="name">
 
             <label>Address</label>
-            <input type="text">
+            <input type="text" id="address">
 
             <label>Date of Birth</label>
-            <input type="date">
+            <input type="date" id="dob">
 
             <label>Select Gender</label>
 
             <div class="gender">
-                <div class="gender-item">
+                <div class="gender-item" id="maleSelect">
                     <div class="gender-box">
                         <img src="./assetes/male.png" alt="">
                     </div>
                     <p>Male</p>
                 </div>
 
-                <div class="gender-item">
+                <div class="gender-item" id="femaleSelect">
                     <div class="gender-box">
                         <img src="./assetes/female.png" alt="">
                     </div>
@@ -78,18 +78,72 @@
             </div>
 
             <label>Your Height (Cm)</label>
-                <input type="number">
+            <input type="number" id="height">
 
-                <label>Your Weight (Cm)</label>
-                <input type="number">
+            <label>Your Weight (Cm)</label>
+            <input type="number" id="weight">
 
-                <button class="btn calculate">Calculate BMI</button>
+            <button class="btn calculate" id="calculateBtn">Calculate BMI</button>
 
         </div>
 
     </div>
 
     <!-- Screen 3 -->
+    <div class="container result-page">
+
+        <div class="header">
+            <i class="ri-arrow-left-line" id="resultBackBtn"></i>
+            <h3><span>BMI</span> Calculator</h3>
+            <!-- <i class="ri-menu-line"></i> -->
+        </div>
+
+        <div class="result-container">
+
+            <div class="result-card">
+
+                <div class="result-top">
+                    <div>
+                        <h2 id="resultName">Name</h2>
+                        <p id="resultAddress">Address</p>
+                    </div>
+                    <img id="resultGenderImage" src="./assetes/male2.png" alt="">
+                </div>
+
+                <div class="bmi-score">
+                    <h1 id="resultBMI">0.0</h1>
+                    <span>BMI Score</span>
+                </div>
+
+                <div class="stats">
+                    <div>
+                        <h3 id="resultAge">0 yrs</h3>
+                        <p>Age</p>
+                    </div>
+                    <div class="divider-vertical"></div>
+                    <div>
+                        <h3 id="resultHeight">0 cm</h3>
+                        <p>Height</p>
+                    </div>
+                    <div class="divider-vertical"></div>
+                    <div>
+                        <h3 id="resultWeight">0 kg</h3>
+                        <p>Weight</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="info-card">
+                <h2 id="resultCategory">Category</h2>
+                <p id="resultRange">(BMI Range)</p>
+                <p id="resultDescription">Description</p>
+            </div>
+
+        </div>
+
+    </div>
 
     <script src="script.js"></script>
 </body>

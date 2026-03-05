@@ -1,284 +1,307 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Plus Jakarta Sans", sans-serif;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Plus Jakarta Sans", sans-serif;
 }
 
-html,
-body {
-    height: 100%;
-    width: 100%;
-    background: #f3f4f6;
+html,body{
+    height:100%;
+    width:100%;
+    background:#f3f4f6;
 }
+
+/* MAIN CONTAINER */
 
 .container{
-    width: 100%;
-    min-height: 100vh;
-    background: #fff;
-    display: flex;
-    flex-direction: column;
+    width:100%;
+    min-height:100vh;
+    background:#fff;
+    display:flex;
+    flex-direction:column;
 }
 
+/* HEADER */
+
 .header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:20px;
 }
 
 .header h3{
-    font-size: 16px;
-    font-weight: 600;
-    font-weight: 500;
-}
-
-.header i{
-    font-size: 18px;
+    font-size:16px;
+    font-weight:500;
 }
 
 .header span{
-    font-weight: 800;
+    font-weight:800;
 }
 
+.header i{
+    font-size:18px;
+    cursor:pointer;
+    transition:all 0.2s ease;
+}
+
+.header i:hover{
+    transform:scale(1.15);
+    color:#4B49DE;
+}
+
+/* HERO IMAGE */
+
 .image{
-    margin-top: 15%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-top:15%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 .image img{
-    width: 100%;
-    max-width: 800px;
+    width:100%;
+    max-width:800px;
 }
 
+/* BOTTOM HERO CARD */
+
 .bottom{
-    background: #4B49DE;
-    color: #ffff;   
-    padding: 30px 20px;
-    flex: 1;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
+    background:#4B49DE;
+    color:#fff;
+    padding:30px 20px;
+    flex:1;
+    border-top-left-radius:30px;
+    border-top-right-radius:30px;
 }
 
 .bottom h1{
-    font-size: 38px;
-    line-height: 1.1;
-    margin-bottom: 23%;
+    font-size:38px;
+    line-height:1.1;
+    margin-bottom:23%;
 }
 
 .bottom span{
-    font-weight: 400;
+    font-weight:400;
 }
 
 .bottom p{
-    font-size: 18px;
-    margin-bottom: 25px;    
-    line-height: 1.2;
-    opacity: 0.8;
+    font-size:18px;
+    margin-bottom:25px;
+    line-height:1.2;
+    opacity:0.8;
 }
 
 .line{
-    height: 0.6px;
-    background-color: #fff;
-    margin-bottom: 40px;
+    height:0.6px;
+    background:#fff;
+    margin-bottom:40px;
 }
+
+/* BUTTONS */
 
 .btn{
-    font-size: 16px;
-    width: 100%;
-    padding: 18px;
+    font-size:16px;
+    width:100%;
+    padding:18px;
     border:none;
-    border-radius: 12px;
-    background: #0f172a;
-    color: #ffff;
-    font-weight: 600;
+    border-radius:12px;
+    background:#0f172a;
+    color:#fff;
+    font-weight:600;
+    cursor:pointer;
+    transition:all 0.25s ease;
 }
 
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
 
-/* screen 2 */
+.btn:active{
+    transform:scale(0.97);
+    box-shadow:0 3px 10px rgba(0,0,0,0.2);
+}
+
+.bottom .btn:hover{
+    background:#020617;
+}
+
+/* ======================
+   SCREEN 2 (FORM PAGE)
+====================== */
+
 .from-page{
-    display: none;
+    display:none;
 }
 
 .form{
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
 }
 
 .form label{
-    font-size: 14px;
-    font-weight: 600;
-    margin: 15px 8px;
+    font-size:14px;
+    font-weight:600;
+    margin:15px 8px;
 }
-
 
 .form input{
-    padding: 15px;
-    border-radius: 12px;
-    border: none;
-    background: #eef1f6;
-    font-size: 14px;
+    padding:15px;
+    border-radius:12px;
+    border:none;
+    background:#eef1f6;
+    font-size:14px;
 }
 
+/* GENDER */
+
 .gender{
-    display: flex;
-    gap: 15px;
+    display:flex;
+    gap:15px;
 }
 
 .gender-item{
-    text-align: center;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    cursor: pointer;
+    text-align:center;
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    cursor:pointer;
+    transition:all 0.25s ease;
 }
 
-.gender-item.active .gender-box {
-    border: 3px solid #4B49DE;
+.gender-item:hover{
+    transform:translateY(-4px);
+}
+
+.gender-item:active{
+    transform:scale(0.96);
+}
+
+.gender-item.active .gender-box{
+    border:3px solid #4B49DE;
 }
 
 .gender-item p{
-    margin-top: 8px;
-    font-size: 15px;
-    font-weight: 500;
+    margin-top:8px;
+    font-size:15px;
+    font-weight:500;
 }
 
 .gender-box{
-    background: #eef1f6;
-    height: 130px;
-    border-radius: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-
+    background:#eef1f6;
+    height:130px;
+    border-radius:18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
 }
 
 .gender-box img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width:100%;
+    height:100%;
+    object-fit:cover;
 }
+
+/* CALCULATE BUTTON */
 
 .form .btn{
-    margin-top: 40px;
-    font-size: 16px;
-    width: 100%;
-    padding: 18px;
-    border:none;
-    border-radius: 12px;
-    background: #4B49DE;
-    color: #ffff;
-    font-weight: 600;
+    margin-top:40px;
+    background:#4B49DE;
 }
 
-/* Screen 3 */
-.result-page {
-    display: none;
-}
-/* Result Page Container */
-.container {
-    /* padding: 20px; */
+.form .btn:hover{
+    background:#5a57f5;
 }
 
-/* Purple Card */
-.result-card {
-    background: linear-gradient(135deg, #5B5AE6, #4B49DE);
-    color: white;
-    border-radius: 25px;
-    padding: 25px;
-    box-shadow: 0 15px 35px rgba(75, 73, 222, 0.3);
-    margin-bottom: 25px;
+/* ======================
+   SCREEN 3 (RESULT PAGE)
+====================== */
+
+.result-page{
+    display:none;
 }
 
-/* Top section */
-.result-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.result-page .header i{
+    color:black;
 }
 
-.result-top h2 {
-    font-size: 20px;
-    margin-bottom: 5px;
+.result-container{
+    padding:0 20px;
+    margin-top:10%;
 }
 
-.result-top p {
-    font-size: 13px;
-    opacity: 0.8;
+/* RESULT CARD */
+
+.result-card{
+    background:#4B49DE;
+    color:#fff;
+    border-radius:25px;
+    padding:35px;
+    margin-bottom:20px;
+    position:relative;
+    box-shadow:0 15px 35px rgba(75,73,222,0.25);
 }
 
-.result-top img {
-    width: 70px;
+.result-top{
+    display:flex;
+    justify-content:space-between;
 }
 
-/* BMI Score */
-.bmi-score {
-    margin-top: 20px;
+.result-top img{
+    width:100px;
 }
 
-.bmi-score h1 {
-    font-size: 48px;
-    font-weight: 700;
+/* BMI SCORE */
+
+.bmi-score{
+    position:absolute;
+    top:40%;
 }
 
-.bmi-score span {
-    font-size: 14px;
-    opacity: 0.9;
+.bmi-score h1{
+    font-size:40px;
 }
 
-/* Stats row */
-.stats {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 25px;
-    text-align: center;
+/* STATS */
+
+.stats{
+    display:flex;
+    justify-content:space-between;
+    margin-top:20px;
+    text-align:center;
 }
 
-.stats h3 {
-    font-size: 16px;
-    font-weight: 600;
+.stats h3{
+    font-size:26px;
+    margin-bottom:3px;
 }
 
-.stats p {
-    font-size: 12px;
-    opacity: 0.8;
+.stats p{
+    opacity:0.8;
 }
 
-/* Vertical divider */
-.divider-vertical {
-    width: 1px;
-    height: 35px;
-    background: rgba(255, 255, 255, 0.4);
+.divider-vertical{
+    border:1px solid rgba(255,255,255,0.5);
 }
 
-/* Dark Info Card */
-.info-card {
-    background: #0F172A;
-    color: white;
-    padding: 25px;
-    border-radius: 25px;
+/* INFO CARD */
+
+.info-card{
+    background:#001524;
+    color:#fff;
+    padding:20px;
+    border-radius:25px;
 }
 
-.info-card h2 {
-    font-size: 20px;
-    margin-bottom: 8px;
+.info-card #resultRange{
+    opacity:0.6;
+    margin-bottom:30px;
 }
 
-.info-card strong {
-    font-size: 13px;
-    opacity: 0.8;
+.info-card #resultDescription{
+    opacity:0.6;
 }
-
-.info-card p {
-    font-size: 14px;
-    line-height: 1.6;
-    margin-top: 10px;
-    opacity: 0.85;
-}
-
