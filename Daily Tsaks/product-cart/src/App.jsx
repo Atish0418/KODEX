@@ -15,7 +15,7 @@ function App() {
       name: "Smart Watch",
       price: "₹2999",
       category: "Gadgets",
-      image: "https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b"
+      image: "https://images.unsplash.com/photo-1635328947544-a0c0961facc9?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       id: 3,
