@@ -1,14 +1,26 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const About = () => {
 
-    console.log('About rerendering....')
+    console.log('About rerendering....');
 
-  return (
-    <div>
-        <h1>About</h1>
-    </div>
-  )
+    useEffect(() => {
+        let timer = setInterval(() => {
+            console.log('hello')
+        }, 1000)
+
+
+        return() => {
+            console.log('I am out');
+            clearInterval(timer)
+        }
+    }, [])
+
+    return (
+        <div>
+            <h1>About</h1>
+        </div>
+    )
 }
 
 export default About

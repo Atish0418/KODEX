@@ -8,17 +8,22 @@ const App = () => {
   let [count, setCount] = useState(0)
   console.log('app rerendering....')
 
-  useEffect(() => {
-    console.log('Hey I am Atish');
-  }, [count])
+  // useEffect(() => {
+  //   console.log('Hey I am Atish');
+  // }, [])
+
+
+
+  // API Call
 
   return (
     <div>
       <h1>App</h1>
 
-      {/* {toggle ? <Home/> : <About/>} */}
+      {toggle ? <Home/> : <About/>}
 
-      <Home/>
+      {/* <Home/>
+      <About/> */}
 
       <button onClick={() => {
         setToggle(prev => !prev)
@@ -28,7 +33,7 @@ const App = () => {
       </button>
 
       <button onClick={() => {
-        setCount(1);
+        setCount(count + 1);
       }}
       >
         Increment
