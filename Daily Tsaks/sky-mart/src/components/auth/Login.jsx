@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router'
+import { Auth } from '../../context/AuthContext'
+import { toast } from 'react-toastify'
 
 
 
 const Login = () => {
 
-    let navigate = useNavigate() 
+    let { registeredUsers, setLoggedInUsers } = useContext(Auth)
+    let navigate = useNavigate()
 
     let {
         register,
@@ -16,7 +19,19 @@ const Login = () => {
     } = useForm()
 
     const handleFormSubmit = (data) => {
-        console.log(data)
+        let user = registeredUsers.find(
+            (elem) => elem.email === data.email && elem.password === data.password
+        )
+        if (!user){
+            toast.error("user not found.")
+            reset()
+            return
+        }
+        
+        setLoggedInUsers(user)
+        navigate("/dashboard")
+        localStorage.setItem('log user', JSON.stringify(user))
+        toast.success("user loggedIn!")
         reset()
     }
 
@@ -72,7 +87,7 @@ const Login = () => {
                 type="submit"
                 className='w-full font-heading cursor-pointer bg-[#C8F400] text-black font-semibold py-3 rounded-xl flex items-center justify-center gap-2 hover:bg-[#E0FF66]'
             >
-                Sign in <i className="ri-arrow-right-line"></i>
+                Sign in <i className="ri-arrow-right-line font-light "></i>
             </button>
 
             <p className='text-white/40 text-[12px] font-body font-semibold mt-6 text-center'>

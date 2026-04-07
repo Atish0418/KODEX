@@ -7,11 +7,11 @@ const AuthLayOut = () => {
     const isRegister = location.pathname === "/register"
 
     return (
-        <div className='min-h-screen bg-[#0D0D0D] flex'>
+        <div className='h-screen bg-[#0D0D0D] flex'>
 
-            {/* LEFT SIDE (hide on register) */}
+            
             {!isRegister && (
-                <div className='w-1/2 flex flex-col justify-center px-12 gap-6 border-r border-white/10'>
+                <div className='w-1/2 flex flex-col justify-center px-12 gap-6 border-r border-white'>
 
                     <div className='absolute top-10 left-12 flex items-center gap-3'>
                         <div className='bg-[#C8F400] text-black px-2 py-1 rounded-2xl'>
@@ -24,11 +24,11 @@ const AuthLayOut = () => {
                     </div>
 
                     <div className='flex flex-col gap-4'>
-                        <p className='text-[#C8F400] text-sm font-semibold'>
+                        <p className='text-[#C8F400] text-sm font-semibold leading-1 mt-10'>
                             WELCOME BACK
                         </p>
 
-                        <h1 className='font-heading text-[45px] font-bold'>
+                        <h1 className='font-heading text-[45px] font-bold leading-14'>
                             Shop the future.
                             <br />
                             <span className='text-[#C8F400]'>Today.</span>
@@ -60,7 +60,6 @@ const AuthLayOut = () => {
                 </div>
             )}
 
-            {/* RIGHT SIDE */}
             <div className={`${isRegister ? "w-full" : "w-1/2"} flex items-center justify-center`}>
                 <Outlet />
             </div>
