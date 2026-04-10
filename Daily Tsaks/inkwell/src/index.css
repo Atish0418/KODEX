@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: HeadingFont;
+  src: url('../public/heading.woff2');
+}
+
+@font-face {
+  font-family: BodyFont;
+  src: url('../public/body.woff2');
+}
+
+@theme{
+  --font-heading: HeadingFont, "sans-serif";
+  --font-body: BodyFont, "sans-serif"
+}
