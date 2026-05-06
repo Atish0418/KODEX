@@ -19,16 +19,16 @@ const Create = () => {
   })
 
 
-  let onFormSubmit = (data) => {
+  let onFormSubmit = (data, status) => {
 
-    console.log(data)
+    console.log(status)
 
     let newArticle = {
       ...data,
       tags: data.tags.split(",").map(tag => tag.trim()),
       author: loggedInUser.name,
       date: new Date().toLocaleDateString(),
-      status: "published",
+      status: status,
     }
 
     let updatedArticles = [newArticle, ...articles]
@@ -38,7 +38,12 @@ const Create = () => {
 
     reset()
 
-    navigate("/")
+    if (status === "draft") {
+      navigate("/dashboard")
+    } else {
+      navigate("/")
+    }
+
   }
 
   return (
@@ -49,7 +54,6 @@ const Create = () => {
       </div>
 
       <form
-        onSubmit={handleSubmit(onFormSubmit)}
         className='mt-6 border flex flex-col gap-6 border-black/20 p-5 rounded-xl'>
 
         <div className='flex flex-col'>
@@ -92,12 +96,18 @@ const Create = () => {
         </div>
 
         <div className='flex gap-2 justify-end mt-6'>
-          <button className='flex gap-4 border border-black/10 items-center bg-[#eeeeee5a] text-black px-3 py-1.5 rounded-lg'>
+          <button
+            type='button'
+            onClick={handleSubmit((data) => onFormSubmit(data, "draft"))}
+            className='flex gap-4 border border-black/10 items-center bg-[#eeeeee5a] text-black px-3 py-1.5 rounded-lg'>
             <i class="ri-save-line"></i>
             <p className='text-[14px] font-semibold'>Save as Draft</p>
           </button>
 
-          <button type='submit' className=' flex gap-4 items-center bg-[#0d5fac] text-white px-3 py-1.5 rounded-lg'>
+          <button
+            type='button'
+            onClick={handleSubmit((data) => onFormSubmit(data, "published"))}
+            className='cursor-pointer flex gap-4 items-center bg-[#0d5fac] text-white px-3 py-1.5 rounded-lg'>
             <i className="ri-send-plane-fill"></i>
             <p className='text-[14px] font-semibold'>Publish</p>
           </button>

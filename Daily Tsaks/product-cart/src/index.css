@@ -17,7 +17,7 @@ body{
   justify-content:center;
   gap:30px;
   margin-top:40px;
-  flex-wrap: wrap;   /* allows wrapping on smaller screens */
+  flex-wrap: wrap;  
 }
 
 /* Card */

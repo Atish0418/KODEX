@@ -7,6 +7,8 @@ const Home = () => {
 
   let { articles } = useContext(Blog)
 
+  let published = articles.filter(a => a.status === "published")
+
   return (
     <div className='px-65 font-heading'>
       <div>
@@ -21,7 +23,7 @@ const Home = () => {
         </div>
 
         <div className="grid grid-cols-3 gap-6 mt-6">
-          {articles.map((elem, id) => (
+          {published.map((elem, id) => (
             <BlogCard key={id} elem={elem} id={id} />
           ))}
         </div>

@@ -14,25 +14,13 @@ body {
 
 body {
     background-color: #111;
-}
-
-nav{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 20px 40px;
-    background-color: rgba(0, 0, 0, 0.135);
-    position: fixed;
-    width: 100%;
-    backdrop-filter: blur(20px);
-    transition: all ease 0.2s;
-}
-
-nav div{
-    display: flex;
-    gap: 20px;
+    justify-content: center;
 }
 
 img{
-    width: 100%;
+    height: 600px;
+    width: 600px;
+    
 }

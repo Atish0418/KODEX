@@ -15,9 +15,9 @@ const ProductDetails = () => {
         if (id) {
             (async () => {
                 try {
-                    let res = await axios.get(`https://dummyjson.com/carts/${id}`)
-                    console.log(res.data.products[0].thumbnail)
-                    setSingleProduct(res.data.products[0])
+                    let res = await axios.get(`https://dummyjson.com/products/${id}`)
+                    console.log(res.data)
+                    setSingleProduct(res.data)
                     setIsLoading(false)
                 } catch (error) {
                     console.log("error in api", error)
@@ -38,6 +38,7 @@ const ProductDetails = () => {
             <div>
                 <img src={singleProduct.thumbnail} alt="" />
                 <h1>{singleProduct.title}</h1>
+                <h1>{singleProduct.description}</h1>
             </div>
 
 

@@ -48,5 +48,5 @@ npm run dev
 ---
 
 ## 👨‍💻 Author
-
-Atish
+ 
+Atish Adhav

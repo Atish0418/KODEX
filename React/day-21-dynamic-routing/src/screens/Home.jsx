@@ -1,18 +1,21 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import ProductCard from '../components/ProductCard'
 import axios from 'axios'
+import Cart from './Cart'
+import { CartStore } from '../context/cartContext'
 
 const Home = () => {
 
   const [products, setProducts] = useState([])
+  let { cartItems } = useContext(CartStore)
 
   useEffect(() => {
-    (async()=>{
-      try{
-        let res = await axios.get("https://dummyjson.com/carts")
-        console.log(res.data.carts)
-        setProducts(res.data.carts)
-      }catch(error){
+    (async () => {
+      try {
+        let res = await axios.get('https://dummyjson.com/products')
+        console.log(res.data.products)
+        setProducts(res.data.products)
+      } catch (error) {
         console.log("error in api", error)
       }
     })()
@@ -20,11 +23,19 @@ const Home = () => {
 
   return (
     <div className='grid grid-cols-5 gap-4'>
-        {
-          products.map((elem) => {
-            return <ProductCard key={elem.id} product = {elem}/>
-          })
-        }
+      {
+        products.map((elem) => {
+          let productInCart = cartItems.find(val => val.id === elem.id)
+
+          return (
+            <ProductCard
+              key={elem.id}
+              product={elem}
+              quantity={productInCart?.quantity}
+            />
+          )
+        })
+      }
     </div>
   )
 }

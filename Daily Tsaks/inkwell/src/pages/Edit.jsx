@@ -12,6 +12,8 @@ const Edit = () => {
   let published = articles.filter(a => a.status === "published").length
   let drafts = articles.filter(a => a.status === "draft").length
 
+  
+
   // console.log(articles)
 
   return (
@@ -19,7 +21,7 @@ const Edit = () => {
       <div className='flex justify-between items-center'>
         <div>
           <h1 className='text-3xl font-bold'>Dashboard</h1>
-          <p className='text-[16px] mt-1 text-black/60'>Manage your articles, name</p>
+          <p className='text-[16px] mt-1 text-black/60'>Manage your articles, {loggedInUser.name}</p>
         </div>
 
         <button
@@ -72,14 +74,15 @@ const Edit = () => {
                     <div >
                       <div className='flex items-center gap-2 font-medium line-clamp-2'>
                         <h3>{elem.title}</h3>
+                        
                         <span className={`text-xs px-2 py-1 rounded-full text-white
                         ${elem.status === "published" ? "bg-blue-500" : "bg-gray-400"}
                       `}>
                           {elem.status}
                         </span>
                       </div>
-  
                     </div>
+
                     <p className='text-sm text-black/70 mt-1'>  
                       {elem.excerpt}
                     </p>
@@ -90,7 +93,7 @@ const Edit = () => {
                   </div>
                 ))
               }
-            </div>
+            </div>  
           )
         }
 
